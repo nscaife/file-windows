@@ -5,6 +5,7 @@ make
 sudo cp regex.h /usr/x86_64-w64-mingw32/include/
 sudo cp libregex.a /usr/x86_64-w64-mingw32/lib/
 sudo cp libgnurx.dll.a /usr/x86_64-w64-mingw32/lib/
+cp COPYING.LIB ../dist/COPYING.libgnurx
 cp libgnurx-0.dll ../dist/
 cd ../file/
 autoreconf -f -i
@@ -16,3 +17,4 @@ make clean
 make -j4
 cp src/.libs/libmagic-1.dll ../dist/
 cp src/.libs/file.exe ../dist/
+cp COPYING ../dist/COPYING.file

@@ -1,0 +1,15 @@
+language: c
+addons:
+    apt:
+        packages:
+            - gcc-mingw-w64-x86-64
+            - binutils-mingw-w64
+script:
+    - cd libgnurx-2.5
+    - make
+    - cp regex.h /usr/x86_64-w64-mingw32/include/
+    - cp libregex.a /usr/x86_64-w64-mingw32/lib/
+    - cp libgnurx.dll.a /usr/x86_64-w64-mingw32/lib/
+    - cd ../file/
+    - ./configure --disable-silent-rules --enable-fsect-man5 --host=x86_64-w64-mingw32
+    - make -j4

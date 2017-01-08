@@ -1,9 +1,9 @@
 language: c
-addons:
-    apt:
-        packages:
-            - gcc-mingw-w64-x86-64
-            - binutils-mingw-w64
+
+before_install:
+    - sudo apt-get update -q
+    - sudo apt-get install gcc-mingw-w64-x86-64 binutils-mingw-w64 -y
+
 script:
     - cd libgnurx-2.5
     - make

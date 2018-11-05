@@ -12,7 +12,7 @@ I have tested this on Bash for Windows (LXSS) under Windows 10 build 14393.  Sin
 You will need to install some packages before building:
 
     sudo apt-get update
-    sudo apt-get install gcc-mingw-w64-i686 gcc-mingw-w64-x86-64 binutils-mingw-w64 git build-essential autoconf2.13 libtool
+    sudo apt-get install gcc-mingw-w64-i686 gcc-mingw-w64-x86-64 binutils-mingw-w64 git build-essential autoconf autoconf2.13 libtool
 
 How to Build
 -------

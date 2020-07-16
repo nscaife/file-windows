@@ -20,7 +20,8 @@ make -j4
 cp magic/magic.mgc ../dist/
 make clean
 ./configure --disable-silent-rules --enable-fsect-man5 --host=x86_64-w64-mingw32
-make -j4
+# profile FILE_COMPILE since otherwise it would try to use "file.exe" even when cross-compiling
+make -j4 FILE_COMPILE=file
 cp src/.libs/libmagic-1.dll ../dist/
 cp src/.libs/file.exe ../dist/
 cp COPYING ../dist/COPYING.file
